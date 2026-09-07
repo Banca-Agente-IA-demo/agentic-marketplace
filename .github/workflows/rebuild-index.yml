@@ -1,0 +1,22 @@
+# Regenera el índice del marketplace a partir de los releases de los dominios.
+#
+# Marcador del hito 0: el contenido real lo fija la spec del generador de índice en agentic-standard.
+# Sólo admite ejecución manual y falla a propósito, para que ningún paso termine en verde sin haber
+# hecho su trabajo. Los disparadores definitivos (repository_dispatch version-published y schedule) se
+# añaden con la spec.
+name: rebuild-index
+
+on:
+  workflow_dispatch:
+
+permissions: {}
+
+jobs:
+  rebuild:
+    name: Regenerar índice (pendiente de spec)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Detener con aviso de marcador
+        run: |
+          echo "::error::rebuild-index.yml es un marcador del hito 0; el generador llega con su spec."
+          exit 1
