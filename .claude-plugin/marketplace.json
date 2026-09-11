@@ -1,0 +1,23 @@
+{
+  "name": "agentic-marketplace",
+  "owner": {
+    "name": "Banca-Agente-IA-demo"
+  },
+  "metadata": {
+    "description": "Indice de produccion: ultima version final de cada unidad."
+  },
+  "plugins": [
+    {
+      "name": "two-channel-demo",
+      "description": "Unidad de prueba de los dos canales. Canal de produccion.",
+      "version": "0.1.0",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Banca-Agente-IA-demo/agents-modernization.git",
+        "path": "plugins/two-channel-demo",
+        "ref": "rel/two-channel-demo--v0.1.0",
+        "sha": "295d65d722d2c2766256fddcbcb103ddfed984bb"
+      }
+    }
+  ]
+}
